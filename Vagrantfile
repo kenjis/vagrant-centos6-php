@@ -87,6 +87,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      chef.add_recipe "php-project"
 
      # Framework of your choice
+     #chef.add_recipe "codeigniter"
      #chef.add_recipe "fuelphp"
      #chef.add_recipe "phalcon"
 

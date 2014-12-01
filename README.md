@@ -36,6 +36,7 @@ Some of the following are including using Chef Opscode repositories.
 
 (Optional)
 
+* CodeIgniter
 * FuelPHP 1.x
 * Phalcon 1.x / 2.x
 * Beanstalkd
