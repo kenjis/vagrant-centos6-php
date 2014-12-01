@@ -37,6 +37,8 @@
 * FuelPHP 1.x
 * Phalcon 1.x / 2.x
 * Beanstalkd
+* PHP 5.6
+* PHP 5.4
 
 ## 推奨されるセットアップ方法とディレクトリ構成
 

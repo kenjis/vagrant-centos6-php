@@ -39,6 +39,8 @@ Some of the following are including using Chef Opscode repositories.
 * FuelPHP 1.x
 * Phalcon 1.x / 2.x
 * Beanstalkd
+* PHP 5.6
+* PHP 5.4
 
 ## Suggesting Setup & Layout
 
