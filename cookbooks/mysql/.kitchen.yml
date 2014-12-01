@@ -1,0 +1,34 @@
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
+
+platforms:
+  - name: ubuntu-12.04
+    run_list:
+      - recipe[apt::default]
+  - name: ubuntu-10.04
+    run_list:
+      - recipe[apt::default]
+  - name: centos-6.4
+    run_list:
+      - recipe[yum::epel]
+  - name: centos-5.9
+    run_list:
+      - recipe[yum::epel]
+
+suites:
+  - name: client
+    run_list:
+      - recipe[mysql_test::client]
+  - name: ruby
+    run_list:
+      - recipe[mysql::ruby]
+  - name: server
+    run_list:
+      - recipe[mysql_test::server]
+  - name: server-nondefault-data
+    run_list:
+      - recipe[mysql_test::server]
+    attributes:
+      mysql:
+        data_dir: "/data/mysql"

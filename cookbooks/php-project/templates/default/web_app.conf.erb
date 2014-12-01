@@ -1,0 +1,9 @@
+<VirtualHost *:80>
+  DocumentRoot /mnt/project/public
+  <Directory /mnt/project>
+    Options FollowSymLinks Indexes
+    AllowOverride all
+    EnableMMAP Off 
+    EnableSendfile Off
+  </Directory>
+</VirtualHost>
