@@ -38,3 +38,22 @@ template "/etc/sysconfig/beanstalkd" do
   mode "0644"
   notifies :restart, "service[beanstalkd]"
 end
+
+execute "install beanstalk_console" do
+  user "root"
+  command <<-EOL
+    cd /usr/local/share
+    rm -rf beanstalk_console
+    git clone https://github.com/ptrofimov/beanstalk_console.git
+    cd beanstalk_console
+    composer install
+    chmod o+w storage.json
+  EOL
+  not_if { File.exists?("/etc/httpd/conf.d/beanstalk_console.conf") }
+end
+
+template "/etc/httpd/conf.d/beanstalk_console.conf" do
+  source "beanstalk_console.conf.erb"
+  mode "0644"
+  notifies :restart, "service[httpd]"
+end
