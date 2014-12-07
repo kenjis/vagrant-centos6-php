@@ -1,0 +1,7 @@
+description "MailCatcher"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+exec scl enable ruby193 "/opt/rh/ruby193/root/usr/local/bin/mailcatcher --ip=0.0.0.0 --smtp-port=25 --foreground" >> /var/log/mailcatcher.log 2>&1
+respawn
