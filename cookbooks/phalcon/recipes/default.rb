@@ -24,6 +24,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+# @TODO depends remi-php55
 execute "install build tools for compiling phalcon" do
   user "root"
   command <<-EOL

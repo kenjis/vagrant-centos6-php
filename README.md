@@ -15,7 +15,7 @@ This project sets up a CentOS 6.5 (64bit) virtual machine to run your PHP projec
 * Ubuntu 14.04     - VirtualBox 4.3.18 & Vagrant 1.6.5 & Git 1.9.1
 * Mac OS X 10.10.1 - VirtualBox 4.3.18 & Vagrant 1.6.5 & Git 1.9.3
 
-## What's in the Development environment?
+## What's in the Development Environment?
 
 Some of the following are including using Chef Opscode repositories.
 
@@ -31,18 +31,21 @@ Some of the following are including using Chef Opscode repositories.
 * PHPUnit 3.7
 * Composer
 * Git 1.7.1
-* MongoDB 2.6
-* Redis 2.4
 * MailCatcher
 
-(Optional)
+### Optional
+
+* MongoDB 2.6
+* Redis 2.4
+* Beanstalkd
+* PHP 5.6
+* PHP 5.4
+
+You can choose your favorite framework.
 
 * CodeIgniter
 * FuelPHP 1.x
 * Phalcon 1.x / 2.x
-* Beanstalkd
-* PHP 5.6
-* PHP 5.4
 
 ## Suggesting Setup & Layout
 
@@ -58,7 +61,7 @@ Setup your directories something like this:
 	├── public/
 	└── vagrant/
 
-## Accessing your project
+## Accessing Your Project
 
 * **Browser by Port Forwarding**: [http://localhost:8000](http://localhost:8000)
 * **Browser by IP Address**: [http://192.168.33.33](http://192.168.33.33)

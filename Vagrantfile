@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8000" will access port 80 on the guest machine.
   config.vm.network :forwarded_port, guest: 80, host: 8000
-  # mailchecker web
+  # mailcatcher web
   config.vm.network :forwarded_port, guest: 1080, host: 1080
 
   # Create a private network, which allows host-only access to the machine
@@ -84,8 +84,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
      chef.add_recipe "git"
      #chef.add_recipe "beanstalkd"
-     chef.add_recipe "mongodb"
-     chef.add_recipe "redis"
+     #chef.add_recipe "mongodb"
+     #chef.add_recipe "redis"
 
      chef.add_recipe "phpunit"
      chef.add_recipe "php-project"

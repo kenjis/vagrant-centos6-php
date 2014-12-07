@@ -29,18 +29,21 @@
 * PHPUnit 3.7
 * Composer
 * Git 1.7.1
-* MongoDB 2.6
-* Redis 2.4
 * MailCatcher
 
-(オプション)
+### オプション
+
+* MongoDB 2.6
+* Redis 2.4
+* Beanstalkd
+* PHP 5.6
+* PHP 5.4
+
+お好きなフレームワークをお選びください。
 
 * CodeIgniter
 * FuelPHP 1.x
 * Phalcon 1.x / 2.x
-* Beanstalkd
-* PHP 5.6
-* PHP 5.4
 
 ## 推奨されるセットアップ方法とディレクトリ構成
 
@@ -56,7 +59,7 @@ vagrant-centos6-phpをあなたのプロジェクトに追加します:
 	├── public/
 	└── vagrant/
 
-## PHPプロジェクトへのアクセス方法
+## プロジェクトへのアクセス方法
 
 * **ブラウザ(ポート転送)**: [http://localhost:8000](http://localhost:8000)
 * **ブラウザ(IPアドレス直接)**: [http://192.168.33.33](http://192.168.33.33)
