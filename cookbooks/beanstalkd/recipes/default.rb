@@ -27,3 +27,14 @@
 yum_package "beanstalkd" do
   action :install
 end
+
+service "beanstalkd" do
+  supports :status => true, :restart => true, :reload => true
+  action [:enable, :start]
+end
+
+template "/etc/sysconfig/beanstalkd" do
+  source "beanstalkd.erb"
+  mode "0644"
+  notifies :restart, "service[beanstalkd]"
+end
