@@ -31,7 +31,7 @@
 * Git 1.7.1
 * MongoDB 2.6
 * Redis 2.4
-* MailChecker
+* MailCatcher
 
 (オプション)
 
