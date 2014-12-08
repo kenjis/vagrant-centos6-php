@@ -86,6 +86,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      #chef.add_recipe "beanstalkd"
      #chef.add_recipe "mongodb"
      #chef.add_recipe "redis"
+     #chef.add_recipe "elasticsearch"
 
      chef.add_recipe "phpunit"
      chef.add_recipe "php-project"

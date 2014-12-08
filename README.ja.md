@@ -36,6 +36,7 @@
 * MongoDB 2.6
 * Redis 2.4
 * Beanstalkd 1.9
+* Elasticsearch 1.4
 * PHP 5.6
 * PHP 5.4
 
