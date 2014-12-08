@@ -29,13 +29,13 @@
 * PHPUnit 3.7
 * Composer
 * Git 1.7.1
-* MailCatcher
+* [MailCatcher](http://mailcatcher.me/)
 
 ### オプション
 
 * MongoDB 2.6
 * Redis 2.4
-* Beanstalkd
+* Beanstalkd 1.9
 * PHP 5.6
 * PHP 5.4
 
@@ -61,9 +61,13 @@ vagrant-centos6-phpをあなたのプロジェクトに追加します:
 
 ## プロジェクトへのアクセス方法
 
-* **ブラウザ(ポート転送)**: [http://localhost:8000](http://localhost:8000)
-* **ブラウザ(IPアドレス直接)**: [http://192.168.33.33](http://192.168.33.33)
-* **MySQL**: mysql:host=192.168.33.33;dbname=php_dev (rootユーザのpasswordはVagrantfileに設定されています)
+* Web
+  * ポート転送: [http://localhost:8000/](http://localhost:8000/)
+  * IPアドレス直接: [http://192.168.33.33/](http://192.168.33.33/)
+  * phpMyAdmin: [http://localhost:8000/phpmyadmin/](http://localhost:8000/phpmyadmin/)
+  * Beanstalk console: [http://localhost:8000/beanstalk_console/](http://localhost:8000/beanstalk_console/)
+* MailCatcher: [http://localhost:1080/](http://localhost:1080/)
+* MySQL: mysql:host=192.168.33.33;dbname=php_dev (rootユーザのpasswordはVagrantfileに設定されています)
 
 ### Vagrant
 

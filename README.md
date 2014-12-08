@@ -31,13 +31,13 @@ Some of the following are including using Chef Opscode repositories.
 * PHPUnit 3.7
 * Composer
 * Git 1.7.1
-* MailCatcher
+* [MailCatcher](http://mailcatcher.me/)
 
 ### Optional
 
 * MongoDB 2.6
 * Redis 2.4
-* Beanstalkd
+* Beanstalkd 1.9
 * PHP 5.6
 * PHP 5.4
 
@@ -63,9 +63,13 @@ Setup your directories something like this:
 
 ## Accessing Your Project
 
-* **Browser by Port Forwarding**: [http://localhost:8000](http://localhost:8000)
-* **Browser by IP Address**: [http://192.168.33.33](http://192.168.33.33)
-* **MySQL**: mysql:host=192.168.33.33;dbname=php_dev (root user password is set in the Vagrantfile)
+* Web
+  * Port Forwarding: [http://localhost:8000/](http://localhost:8000/)
+  * IP Address: [http://192.168.33.33/](http://192.168.33.33/)
+  * phpMyAdmin: [http://localhost:8000/phpmyadmin/](http://localhost:8000/phpmyadmin/)
+  * Beanstalk console: [http://localhost:8000/beanstalk_console/](http://localhost:8000/beanstalk_console/)
+* MailCatcher: [http://localhost:1080/](http://localhost:1080/)
+* MySQL: mysql:host=192.168.33.33;dbname=php_dev (root user password is set in the Vagrantfile)
 
 ### Vagrant
 
