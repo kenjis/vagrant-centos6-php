@@ -41,9 +41,9 @@
 
 お好きなフレームワークを選べます。
 
-* CodeIgniter
+* CodeIgniter（[CodeIgniterの開発環境をvagrant-centos6-phpを使い構築する](http://blog.a-way-out.net/blog/2014/12/02/install-codeigniter-with-vagrant/)参照）
 * FuelPHP 1.x
-* Phalcon 1.x / 2.x
+* Phalcon 1.x / 2.x（[Phalconの開発環境をvagrant-centos6-phpを使い構築する](http://blog.a-way-out.net/blog/2014/12/01/install-phalcon-with-vagrant/)参照）
 
 ## 推奨されるセットアップ方法とディレクトリ構成
 
