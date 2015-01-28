@@ -70,13 +70,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      chef.add_recipe "mysql::server"
      chef.add_recipe "mailcatcher"
 
-     # remi
+     # PHP: You can use only one PHP. The default is PHP 5.5 remi
+     ## remi
      chef.add_recipe "yum-remi"
      chef.add_recipe "php55-remi"
-     #chef.add_recipe "php56-remi"  # You must change yum.remi-repo below, if you use this
+     #chef.add_recipe "php56-remi"
      chef.add_recipe "phpmyadmin-remi"
-
-     # ius
+     ## ius
      #chef.add_recipe "yum::ius"
      #chef.add_recipe "php55-ius"
      #chef.add_recipe "php54-ius"
