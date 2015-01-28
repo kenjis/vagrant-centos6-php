@@ -73,6 +73,7 @@ Setup your directories something like this:
   * Beanstalk console: [http://localhost:8000/beanstalk_console/](http://localhost:8000/beanstalk_console/)
 * MailCatcher: [http://localhost:1080/](http://localhost:1080/)
 * MySQL: mysql:host=192.168.33.33;dbname=php_dev (root user password is set in the Vagrantfile)
+* Jenkins: [http://localhost:8080/](http://localhost:8080/)
 
 ### Vagrant
 

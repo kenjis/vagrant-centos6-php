@@ -71,6 +71,7 @@ vagrant-centos6-phpをあなたのプロジェクトに追加します:
   * Beanstalk console: [http://localhost:8000/beanstalk_console/](http://localhost:8000/beanstalk_console/)
 * MailCatcher: [http://localhost:1080/](http://localhost:1080/)
 * MySQL: mysql:host=192.168.33.33;dbname=php_dev (rootユーザのpasswordはVagrantfileに設定されています)
+* Jenkins: [http://localhost:8080/](http://localhost:8080/)
 
 ### Vagrant
 
