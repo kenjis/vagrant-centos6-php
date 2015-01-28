@@ -22,6 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8000
   # mailcatcher web
   config.vm.network :forwarded_port, guest: 1080, host: 1080
+  # (optional) jenkins
+  #config.vm.network :forwarded_port, guest: 8080, host: 8080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -83,19 +85,23 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      #chef.add_recipe "phpmyadmin"
 
      chef.add_recipe "git"
+
+     # (optional) Servers
      #chef.add_recipe "beanstalkd"
      #chef.add_recipe "mongodb"
      #chef.add_recipe "redis"
      #chef.add_recipe "elasticsearch"
+     #chef.add_recipe "jenkins"
 
      chef.add_recipe "phpunit"
      chef.add_recipe "php-project"
 
-     # Framework of your choice
+     # (optional) Framework of your choice
      #chef.add_recipe "codeigniter"
      #chef.add_recipe "fuelphp"
      #chef.add_recipe "phalcon"
 
+     # (optional) Update all yum packages
      #chef.add_recipe "yum-update"
 
   #   # You may also specify custom JSON attributes:

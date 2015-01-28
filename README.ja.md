@@ -37,10 +37,12 @@
 * Redis 2.4
 * Beanstalkd 1.9
 * Elasticsearch 1.4
-* PHP 5.6
-* PHP 5.4
+* Jenkins
+* PHP（1つのPHPバージョンのみインストール可能）
+  * PHP 5.6
+  * PHP 5.4
 
-お好きなフレームワークを選べます。
+お好きなフレームワーク（1つ）を選べます。
 
 * CodeIgniter（[CodeIgniterの開発環境をvagrant-centos6-phpを使い構築する](http://blog.a-way-out.net/blog/2014/12/02/install-codeigniter-with-vagrant/)参照）
 * FuelPHP 1.x

@@ -39,10 +39,12 @@ Some of the following are including using Chef Opscode repositories.
 * Redis 2.4
 * Beanstalkd 1.9
 * Elasticsearch 1.4
-* PHP 5.6
-* PHP 5.4
+* Jenkins
+* PHP (You can install only one PHP version)
+  * PHP 5.6
+  * PHP 5.4
 
-You can choose your favorite framework.
+You can choose your favorite framework. (You can choose only one)
 
 * CodeIgniter
 * FuelPHP 1.x
