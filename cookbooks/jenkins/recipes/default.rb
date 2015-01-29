@@ -28,7 +28,11 @@ yum_package "java-1.8.0-openjdk" do
   action :install
 end
 
-# install Jenkins repo
+execute "install vlgothic fonts" do
+  user "root"
+  command "yum -y install vlgothic-fonts vlgothic-p-fonts"
+end
+
 execute "install jenkins repo" do
   command <<-EOL
     wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
@@ -44,4 +48,57 @@ end
 service "jenkins" do
   supports :status => true, :restart => true, :reload => true
   action [:enable, :start]
+end
+
+execute "install jenkins php-template" do
+  command <<-EOL
+    cd /var/lib/jenkins/jobs
+    rm -rf php-template
+    git clone git://github.com/sebastianbergmann/php-jenkins-template.git php-template
+    chown -R jenkins:jenkins php-template
+  EOL
+  user "root"
+end
+
+remote_file "/var/lib/jenkins/jenkins-cli.jar" do
+  source "http://localhost:8080/jnlpJars/jenkins-cli.jar"
+  retries 30
+  retry_delay 10
+end
+
+execute "update jenkins plugin list" do
+  command "curl -L http://updates.jenkins-ci.org/update-center.json | sed '1d;$d' | curl -X POST -H 'Accept: application/json' -d @- http://localhost:8080/updateCenter/byId/default/postBack"
+end
+
+execute "install jenkins plugins" do
+  command <<-EOL
+    java -jar /var/lib/jenkins/jenkins-cli.jar -s http://localhost:8080 install-plugin git checkstyle cloverphp crap4j dry htmlpublisher jdepend plot pmd violations xunit phing
+  EOL
+  user "vagrant"
+end
+
+directory "/var/lib/jenkins/jobs/fuelphp-template" do
+  owner "jenkins"
+  group "jenkins"
+  mode 00755
+  action :create
+end
+
+template "/var/lib/jenkins/jobs/fuelphp-template/config.xml" do
+  owner "jenkins"
+  group "jenkins"
+  source "fuelphp-template-config.xml.erb"
+  mode "0644"
+end
+
+service "jenkins" do
+  action :restart
+end
+
+# change /home/vagrant permission to use composer installed commands
+execute "change /home/vagrant permission" do
+  command <<-EOL
+    chmod go+rx /home/vagrant
+  EOL
+  user "root"
 end

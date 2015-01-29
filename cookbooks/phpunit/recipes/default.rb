@@ -24,7 +24,6 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-# install composer
 execute "install composer" do
   command <<-EOL
     curl -sS https://getcomposer.org/installer | php
@@ -35,7 +34,6 @@ execute "install composer" do
   not_if { File.exists?("/usr/local/bin/composer") }
 end
 
-# install phpunit
 execute "install phpunit" do
   # FIXME
   # command "composer global require 'phpunit/phpunit=3.7.*'"
@@ -49,6 +47,32 @@ execute "install phpunit" do
   EOL
   user "vagrant"
   not_if { File.exists?("/home/vagrant/.composer/vendor/bin/phpunit") }
+end
+
+execute "install php QA tools" do
+  command <<-EOL
+    mkdir -p /home/vagrant/.composer
+    cd /home/vagrant/.composer
+    composer require 'squizlabs/php_codesniffer=2.2.*'
+    composer require 'phploc/phploc=2.0.*'
+    composer require 'pdepend/pdepend=2.0.*'
+    composer require 'phpmd/phpmd=2.2.*'
+    composer require 'sebastian/phpcpd=2.0.*'
+    composer require 'theseer/phpdox=0.7.*'
+    composer require 'phing/phing=2.9.*'
+  EOL
+  user "vagrant"
+  not_if { File.exists?("/home/vagrant/.composer/vendor/bin/phing") }
+end
+
+execute "install fuelphp-phpcs" do
+  command <<-EOL
+    git clone https://github.com/eviweb/fuelphp-phpcs.git
+    cd fuelphp-phpcs/Standards
+    mv FuelPHP /home/vagrant/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+  EOL
+  user "vagrant"
+  not_if { File.exists?("/home/vagrant/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/FuelPHP") }
 end
 
 # set composer path
