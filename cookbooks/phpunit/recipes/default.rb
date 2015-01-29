@@ -67,6 +67,7 @@ end
 
 execute "install fuelphp-phpcs" do
   command <<-EOL
+    cd /home/vagrant
     git clone https://github.com/eviweb/fuelphp-phpcs.git
     cd fuelphp-phpcs/Standards
     mv FuelPHP /home/vagrant/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
