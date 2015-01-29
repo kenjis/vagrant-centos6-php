@@ -54,7 +54,7 @@ execute "install jenkins php-template" do
   command <<-EOL
     cd /var/lib/jenkins/jobs
     rm -rf php-template
-    git clone git://github.com/sebastianbergmann/php-jenkins-template.git php-template
+    git clone --depth=1 https://github.com/sebastianbergmann/php-jenkins-template.git php-template
     chown -R jenkins:jenkins php-template
   EOL
   user "root"
