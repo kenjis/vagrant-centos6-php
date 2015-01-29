@@ -50,16 +50,6 @@ service "jenkins" do
   action [:enable, :start]
 end
 
-execute "install jenkins php-template" do
-  command <<-EOL
-    cd /var/lib/jenkins/jobs
-    rm -rf php-template
-    git clone --depth=1 https://github.com/sebastianbergmann/php-jenkins-template.git php-template
-    chown -R jenkins:jenkins php-template
-  EOL
-  user "root"
-end
-
 remote_file "/var/lib/jenkins/jenkins-cli.jar" do
   source "http://localhost:8080/jnlpJars/jenkins-cli.jar"
   retries 30
@@ -75,6 +65,16 @@ execute "install jenkins plugins" do
     java -jar /var/lib/jenkins/jenkins-cli.jar -s http://localhost:8080 install-plugin git checkstyle cloverphp crap4j dry htmlpublisher jdepend plot pmd violations xunit phing
   EOL
   user "vagrant"
+end
+
+execute "install jenkins php-template" do
+  command <<-EOL
+    cd /var/lib/jenkins/jobs
+    rm -rf php-template
+    git clone --depth=1 https://github.com/sebastianbergmann/php-jenkins-template.git php-template
+    chown -R jenkins:jenkins php-template
+  EOL
+  user "root"
 end
 
 directory "/var/lib/jenkins/jobs/fuelphp-template" do
