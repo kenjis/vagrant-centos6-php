@@ -26,7 +26,7 @@
 * MySQL 5.1
   * データベース **php_dev** および **php_test**
 * phpMyAdmin 4.0
-* PHPUnit 3.7
+* PHPUnit 4.4
 * Composer
 * Git 1.7.1
 * [MailCatcher](http://mailcatcher.me/)

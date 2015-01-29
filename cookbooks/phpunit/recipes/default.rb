@@ -36,14 +36,14 @@ end
 
 execute "install phpunit" do
   # FIXME
-  # command "composer global require 'phpunit/phpunit=3.7.*'"
+  # command "composer global require 'phpunit/phpunit=4.4.*'"
   # does not work. The below error occurs.
   #   STDERR: [ErrorException]
   #   chdir(): No such file or directory (errno 2)
   command <<-EOL
     mkdir -p /home/vagrant/.composer
     cd /home/vagrant/.composer
-    composer require 'phpunit/phpunit=3.7.*'
+    composer require 'phpunit/phpunit=4.4.*'
   EOL
   user "vagrant"
   not_if { File.exists?("/home/vagrant/.composer/vendor/bin/phpunit") }

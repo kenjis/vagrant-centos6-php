@@ -28,7 +28,7 @@ Some of the following are including using Chef Opscode repositories.
 * MySQL 5.1
   * **php_dev** and **php_test** databases
 * phpMyAdmin 4.0
-* PHPUnit 3.7
+* PHPUnit 4.4
 * Composer
 * Git 1.7.1
 * [MailCatcher](http://mailcatcher.me/)
