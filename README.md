@@ -24,7 +24,7 @@ Some of the following are including using Chef Opscode repositories.
   * Zend OPcache
   * APCu
 * Apache 2.2
-  * vhost setup for your project
+  * vhost setup for your PHP project
 * MySQL 5.1
   * **php_dev** and **php_test** databases
 * phpMyAdmin 4.0
@@ -34,6 +34,8 @@ Some of the following are including using Chef Opscode repositories.
 * [MailCatcher](http://mailcatcher.me/)
 
 ### Optional
+
+Enable configure in `Vagrantfile`.
 
 * MongoDB 2.6
 * Redis 2.4

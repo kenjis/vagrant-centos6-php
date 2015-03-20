@@ -22,7 +22,7 @@
   * Zend OPcache
   * APCu
 * Apache 2.2
-  * FuelPHPプロジェクト用のバーチャルホスト設定
+  * PHPプロジェクト用のバーチャルホスト設定
 * MySQL 5.1
   * データベース **php_dev** および **php_test**
 * phpMyAdmin 4.0
@@ -32,6 +32,8 @@
 * [MailCatcher](http://mailcatcher.me/)
 
 ### オプション
+
+`Vagrantfile`の設定を有効にしてください。
 
 * MongoDB 2.6
 * Redis 2.4
