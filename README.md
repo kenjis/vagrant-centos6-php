@@ -50,7 +50,7 @@ You can choose your favorite framework. (You can choose only one)
 
 * CodeIgniter
 * FuelPHP 1.x
-* Phalcon 1.x / 2.x
+* Phalcon 2.x / 1.x
 
 ## Suggesting Setup & Layout
 
