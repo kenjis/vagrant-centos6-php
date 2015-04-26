@@ -29,7 +29,7 @@
 * PHPUnit 4.4
 * Composer
 * Git 1.7.1
-* [MailCatcher](http://mailcatcher.me/)
+* [MailCatcher](http://mailcatcher.me/) 0.6.1
 
 ### オプション
 

@@ -35,7 +35,7 @@ end
 # install MailCatcher
 execute "install mailcatcher" do
   command <<-EOL
-    scl enable ruby193 'gem install mailcatcher'
+    scl enable ruby193 'gem install mailcatcher -v 0.6.1'
   EOL
   user "root"
 end
@@ -44,4 +44,10 @@ end
 template "/etc/init/mailcatcher.conf" do
   source "mailcatcher.conf.erb"
   mode "0644"
+end
+
+# install sendmail wrapper script for php
+template "/usr/local/bin/sendmail.sh" do
+  source "sendmail.sh.erb"
+  mode "0755"
 end
