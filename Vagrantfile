@@ -77,6 +77,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      chef.add_recipe "yum-remi"
      chef.add_recipe "php55-remi"
      #chef.add_recipe "php56-remi"
+     #chef.add_recipe "php70-remi"
      chef.add_recipe "phpmyadmin-remi"
      ## ius
      #chef.add_recipe "yum::ius"
