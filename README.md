@@ -45,6 +45,7 @@ Enable configure in `Vagrantfile`.
 * PHP (You can install only one PHP version)
   * PHP 5.6
   * PHP 5.4
+  * PHP 7.0
 
 You can choose your favorite framework. (You can choose only one)
 
