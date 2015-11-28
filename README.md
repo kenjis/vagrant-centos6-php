@@ -4,6 +4,8 @@
 
 This project sets up a CentOS 6.5 (64bit) virtual machine to run your PHP project in.  It mounts your PHP project directory so that you can use your favorite editors to work.
 
+**Note:** If you are looking for CentOS 7, see <https://github.com/kenjis/vagrant-centos7-php>.
+
 ## Requirements
 
 * VirtualBox - Free virtualization software [Download Virtualbox](https://www.virtualbox.org/wiki/Downloads)
