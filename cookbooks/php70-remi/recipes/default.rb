@@ -35,10 +35,9 @@ end
 
 execute "install php70-remi" do
   user "root"
-  command <<<-EOL
-    yum --enablerepo=remi update remi-release
-    "yum -y install --enablerepo=remi,remi-php70 php php-mbstring php-gd php-mcrypt php-mysqlnd php-pear php-xml php-opcache php-pecl-apcu php-intl"
-    #"yum -y install --enablerepo=remi,remi-php70 php-pecl-xdebug"
+  command <<-EOL
+    yum -y --enablerepo=remi update remi-release
+    yum -y install --enablerepo=remi,remi-php70 php php-mbstring php-gd php-mcrypt php-mysqlnd php-pear php-xml php-opcache php-pecl-apcu php-intl php-pecl-xdebug
   EOL
 end
 
