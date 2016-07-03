@@ -21,7 +21,7 @@ This project sets up a CentOS 6.5 (64bit) virtual machine to run your PHP projec
 
 Some of the following are including using Chef Opscode repositories.
 
-* PHP 5.5
+* PHP 5.6
   * Xdebug
   * Zend OPcache
   * APCu

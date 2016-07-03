@@ -17,7 +17,7 @@
 
 以下のいくつかは、Chef Opscodeリポジトリを使ってインストールされます。
 
-* PHP 5.5
+* PHP 5.6
   * Xdebug
   * Zend OPcache
   * APCu
