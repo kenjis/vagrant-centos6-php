@@ -41,7 +41,7 @@
 * Elasticsearch 1.4
 * Jenkins
 * PHP（1つのPHPバージョンのみインストール可能）
-  * PHP 5.6
+  * PHP 5.5
   * PHP 5.4
   * PHP 7.0
 
