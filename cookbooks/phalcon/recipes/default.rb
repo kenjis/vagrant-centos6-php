@@ -24,11 +24,11 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-# @TODO depends remi-php55
+# @TODO depends remi-php56
 execute "install build tools for compiling phalcon" do
   user "root"
   command <<-EOL
-    yum install -y --enablerepo=remi,remi-php55 php-devel php-mysql gcc libtool re2c
+    yum install -y --enablerepo=remi,remi-php56 php-devel php-mysql gcc libtool re2c
   EOL
 end
 
@@ -36,7 +36,7 @@ execute "compile phalcon1" do
   user "root"
   command <<-EOL
     rm -rf cphalcon
-    git clone -b 1.3.5 --depth=1 git://github.com/phalcon/cphalcon.git
+    git clone -b 1.3.6 --depth=1 git://github.com/phalcon/cphalcon.git
     cd cphalcon/build
     ./install
     cp -p /usr/lib64/php/modules/phalcon.so /usr/lib64/php/modules/phalcon.so.1
