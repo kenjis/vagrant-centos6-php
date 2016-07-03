@@ -35,7 +35,8 @@ end
 # install MailCatcher
 execute "install mailcatcher" do
   command <<-EOL
-    scl enable ruby193 'gem install mailcatcher -v 0.6.1'
+    scl enable ruby193 'gem install mime-types --version "< 3"'
+    scl enable ruby193 'gem install --conservative mailcatcher -v 0.6.1'
   EOL
   user "root"
 end
