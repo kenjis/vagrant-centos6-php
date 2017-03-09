@@ -24,7 +24,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-yum_package "centos-release-SCL" do
+yum_package "centos-release-scl-rh" do
   action :install
 end
 
