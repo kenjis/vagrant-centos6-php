@@ -10,11 +10,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "CentOS-6.5-x86_64"
+  config.vm.box = "CentOS-6.7-x86_64"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.5-x86_64-v20140311.box"
+  config.vm.box_url = "https://svwh.dl.sourceforge.net/project/nrel-vagrant-boxes/CentOS-6.7-x86_64-v20151108.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -37,6 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
   # config.ssh.forward_agent = true
+  config.ssh.insert_key = false
 
   # Mount the parent directory at /mnt/project
   config.vm.synced_folder "../", "/mnt/project",
