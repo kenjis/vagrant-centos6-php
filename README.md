@@ -2,7 +2,7 @@
 
 [日本語](README.ja.md)
 
-This project sets up a CentOS 6.5 (64bit) virtual machine to run your PHP project in.  It mounts your PHP project directory so that you can use your favorite editors to work.
+This project sets up a CentOS 6.7 (64bit) virtual machine to run your PHP project in.  It mounts your PHP project directory so that you can use your favorite editors to work.
 
 **Note:** If you are looking for CentOS 7, see <https://github.com/kenjis/vagrant-centos7-php>.
 
@@ -14,8 +14,7 @@ This project sets up a CentOS 6.5 (64bit) virtual machine to run your PHP projec
 
 ### Tested
 
-* Ubuntu 14.04     - VirtualBox 4.3.18 & Vagrant 1.6.5 & Git 1.9.1
-* Mac OS X 10.10.1 - VirtualBox 4.3.18 & Vagrant 1.6.5 & Git 1.9.3
+* Mac OS X 10.11.6 - VirtualBox 5.0.30 & Vagrant 1.8.1 & Git 2.10.1
 
 ## What's in the Development Environment?
 
