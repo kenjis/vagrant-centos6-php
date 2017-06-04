@@ -28,7 +28,7 @@ yum_package "centos-release-scl-rh" do
   action :install
 end
 
-%w(ruby193-ruby ruby193-ruby-devel ruby193-rubygem-json).each do |package|
+%w(rh-ruby22-ruby rh-ruby22-ruby-devel rh-ruby22-rubygem-json).each do |package|
   yum_package package do
     action :install
   end
